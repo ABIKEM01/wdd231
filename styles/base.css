@@ -1,0 +1,167 @@
+/* terra cota #E07A5F 
+deep slate blue #3D405B */
+
+* {
+  font-family: "josephin sans" "sans-serif";
+  box-sizing: "border-box";
+}
+
+/***************************** HEADER ***********************************/
+header {
+  display: grid;
+  grid-template-columns: 24px auto 44px;
+  padding: 5px 0 5px 10px;
+  border-bottom: 1px solid #ddd;
+  column-gap: 8px;
+  align-items: end;
+}
+
+header img {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding-bottom: 5px;
+}
+
+header span {
+  font-size: 1.2rem;
+  color: #3d405b;
+}
+
+/***************************** HAMBURGER ***********************************/
+.hamburger {
+  background: none;
+  border: none;
+  color: #3d405b;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.hamburger::before {
+  content: "\2630";
+  font-size: 2rem;
+}
+.hamburger.show::before {
+  content: "\00D7";
+  font-size: 2rem;
+}
+
+/*****************************  NAVIGATION ***********************************/
+
+.navigation {
+  display: none;
+}
+
+.navigation.show {
+  display: block;
+}
+
+.navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.navigation a {
+  display: block;
+  padding: 0.8rem 10px;
+  color: #3d405b;
+  text-decoration: none;
+  border-bottom: solid 1px #ddd;
+}
+
+.navigation li.current {
+  background-color: #eee;
+}
+.navigation a:hover {
+  background-color: #e07a5f;
+}
+.navigation a.active {
+  background-color: #ddd;
+}
+h1 {
+  margin-left: 10px;
+}
+
+main {
+  padding: 1rem;
+}
+
+section {
+  margin: 1rem 0;
+}
+
+h2 {
+  background-color: #3d405b;
+  color: white;
+  padding: 0.5rem;
+}
+
+.photo img {
+  max-width: 100%;
+  border: 1px solid #ccc;
+}
+
+.course-container {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.course {
+  background: #f3f3f3;
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.course.completed {
+  background: #e07a5f;
+  color: white;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0.5rem;
+}
+
+.filter-buttons button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #3d405b;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.filter-buttons button:hover {
+  background: #e07a5f;
+}
+
+/************************************************* FOOTER ********************************************/
+footer {
+  background-color: #eee;
+  padding: 1rem 10px;
+  text-align: center;
+}
+.social {
+  display: flex;
+  justify-content: center;
+  column-gap: 8px;
+}
+.social a {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px #ccc;
+  border-radius: 22px;
+}
+
+.social img {
+  width: 22px;
+  height: 22px;
+}
+.social a:hover {
+  background-color: #ddd;
+}
