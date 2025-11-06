@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Naija Tech Solutions",
+    "address": "23 Adeola Street, Lagos, Nigeria",
+    "phone": "+234 801 234 5678",
+    "website": "https://naijatech.com",
+    "image": "https://africa-green-energy.com/wp-content/uploads/2024/12/cropped-Sans-titre.png",
+    "membership": 3
+  },
+  {
+    "name": "Abuja Fresh Mart",
+    "address": "45 Unity Avenue, Abuja, Nigeria",
+    "phone": "+234 809 876 5432",
+    "website": "https://abujafreshmart.ng",
+    "image": "https://cdn.dribbble.com/userupload/32457499/file/original-10dd55c1ef8aeddc6afb68b0a6fed3f3.png",
+    "membership": 2
+  },
+  {
+    "name": "Green Energy Africa",
+    "address": "12 Power Line Rd, Port Harcourt",
+    "phone": "+234 808 654 1234",
+    "website": "https://greenenergy.africa",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_Renewable_Energy_by_Melanie_Maecker-Tursun_V1_bgGreen.svg/1200px-Logo_Renewable_Energy_by_Melanie_Maecker-Tursun_V1_bgGreen.svg.png",
+    "membership": 1
+  },
+  {
+    "name": "Lagos Creative Hub",
+    "address": "7 Bourdillon Road, Ikoyi, Lagos",
+    "phone": "+234 802 765 4433",
+    "website": "https://lagoscreativehub.com",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPCFBvvY6Ag9Zmxg1UFKwjD30UE_nLc5AvJw&s",
+    "membership": 3
+  },
+  {
+    "name": "Kaduna Agro Foods",
+    "address": "101 Independence Way, Kaduna, Nigeria",
+    "phone": "+234 805 111 2299",
+    "website": "https://kadunaagrofoods.com",
+    "image": "https://sapz.gov.ng/wp-content/uploads/2022/07/sapz.webp",
+    "membership": 2
+  },
+  {
+    "name": "Enugu Build Contractors",
+    "address": "8 Ogui Road, Enugu, Nigeria",
+    "phone": "+234 803 223 7765",
+    "website": "https://enugubuild.com.ng",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS45-I2VjSDtiaYfh737PFguIAvjqbpMk8riw&s",
+    "membership": 1
+  },
+  {
+    "name": "Ibadan Health Clinic",
+    "address": "32 Ring Road, Ibadan, Nigeria",
+    "phone": "+234 807 555 1122",
+    "website": "https://ibadanhealthclinic.org",
+    "image": "https://cdn-icons-png.flaticon.com/512/2966/2966482.png",
+    "membership": 3
+  },
+  {
+    "name": "Aba Fashion House",
+    "address": "14 Brass Street, Aba, Abia State",
+    "phone": "+234 806 339 8877",
+    "website": "https://abafashionhouse.com",
+    "image": "https://img.freepik.com/premium-vector/letter-aba-vector-logo-design-luxury-fashion-jewelry-boutique-startup_799995-872.jpg",
+    "membership": 2
+  }
+]

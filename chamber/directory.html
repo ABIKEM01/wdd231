@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Nigeria Chamber of Commerce Directory Page - Supporting local businesses and economic growth."
+    />
+    <meta name="author" content="Abiodun Temitope Babayode" />
+
+    <!-- Facebook Open Graph Meta -->
+    <meta property="og:title" content="Nigeria Chamber of Commerce" />
+    <meta
+      property="og:description"
+      content="Explore local Nigerian businesses in our Chamber of Commerce Directory."
+    />
+    <meta
+      property="og:image"
+      content="https://abikem01.github.io/wdd231/chamber/images/social-preview.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://abikem01.github.io/wdd231/chamber/directory.html"
+    />
+    <meta property="og:type" content="website" />
+
+    <title>Nigeria Chamber of Commerce | Directory</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="images/logo.jpeg" alt="Nigeria Chamber of Commerce logo" />
+        <h1>Nigeria Chamber of Commerce</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html" class="active">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+      </nav>
+      <button id="menu-btn">&#9776;</button>
+    </header>
+
+    <main>
+      <h2>Business Directory</h2>
+      <div class="view-toggle">
+        <button id="grid-btn">Grid View</button>
+        <button id="list-btn">List View</button>
+      </div>
+
+      <div id="directory-container" class="grid"></div>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="year"></span> Nigeria Chamber of Commerce</p>
+      <p>WDD231 | Abiodun Temitope Babayode</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scripts/directory.js" defer></script>
+  </body>
+</html>
