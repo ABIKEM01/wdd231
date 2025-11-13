@@ -12,30 +12,24 @@
   h1 {
     font-size: 16px;
   }
-}
-
-@media (min-width: 768px) {
-  .hero-img {
-    height: 400px;
-  }
 
   main {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 1.5rem;
+    display: block;
   }
 
   .events,
   .weather,
   .spotlights {
-    grid-column: 1 / -1;
+    grid-column: unset;
+    margin-bottom: 1.5rem;
   }
 
   footer {
-    font-size: 1rem;
+    font-size: 0.85rem;
+    text-align: center;
   }
 
   .spotlights #spotlight-container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
   }
 }
