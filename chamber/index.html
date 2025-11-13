@@ -2,10 +2,115 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=Home, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Nigeria Chamber of Commerce Home Page - Promoting businesses, events, and opportunities."
+    />
+    <meta name="author" content="Abiodun Temitope Babayode" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Nigeria Chamber of Commerce" />
+    <meta
+      property="og:description"
+      content="Connecting and supporting Nigerian businesses for economic growth."
+    />
+    <meta
+      property="og:image"
+      content="https://abikem01.github.io/wdd231/chamber/images/social-preview.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://abikem01.github.io/wdd231/chamber/index.html"
+    />
+    <meta property="og:type" content="website" />
+
+    <title>Nigeria Chamber of Commerce | Home</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/large.css" />
+    <script src="scripts/index.js" defer></script>
   </head>
   <body>
-    Home
+    <header>
+      <div class="logo">
+        <img src="images/logo.jpeg" alt="Nigeria Chamber of Commerce logo" />
+        <h1>Nigeria Chamber of Commerce</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+      </nav>
+      <button id="menu-btn">&#9776;</button>
+    </header>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero">
+        <img
+          src="images/hero3.webp"
+          alt="Chamber of Commerce hero banner"
+          class="hero-img"
+        />
+        <div class="hero-text">
+          <h2>Welcome to the Nigeria Chamber of Commerce</h2>
+          <p>Empowering Local Businesses and Building Stronger Communities</p>
+          <a href="join.html" class="cta-btn">Join the Chamber</a>
+        </div>
+      </section>
+
+      <!-- EVENTS SECTION -->
+      <section class="events">
+        <h2>Upcoming Events</h2>
+        <ul>
+          <li>
+            <strong>Nov 25:</strong> Business Networking Breakfast - Lagos
+          </li>
+          <li><strong>Dec 5:</strong> Digital Marketing Workshop - Abuja</li>
+          <li><strong>Jan 10:</strong> Women in Business Conference</li>
+        </ul>
+      </section>
+
+      <!-- WEATHER SECTION -->
+      <section class="weather">
+        <h2>Current Weather</h2>
+        <div id="weather-info">
+          <p>Loading weather data...</p>
+        </div>
+        <div id="forecast"></div>
+      </section>
+
+      <!-- SPOTLIGHT SECTION -->
+      <section class="spotlights">
+        <h2>Business Spotlights</h2>
+        <div id="spotlight-container"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-info">
+        <p>Nigeria Chamber of Commerce</p>
+        <p>10 Unity Road, Lagos, Nigeria</p>
+        <p>Email: info@nigeriachamber.org | Phone: (234) 555-2300</p>
+      </div>
+      <p>
+        &copy; <span id="year"></span> Nigeria Chamber of Commerce | WDD231 |
+        Abiodun Temitope Babayode
+      </p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
   </body>
 </html>

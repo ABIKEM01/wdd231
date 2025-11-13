@@ -13,3 +13,29 @@
     font-size: 16px;
   }
 }
+
+@media (min-width: 768px) {
+  .hero-img {
+    height: 400px;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .events,
+  .weather,
+  .spotlights {
+    grid-column: 1 / -1;
+  }
+
+  footer {
+    font-size: 1rem;
+  }
+
+  .spotlights #spotlight-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
