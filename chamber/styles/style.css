@@ -71,13 +71,6 @@ main {
   border-radius: 50%;
 }
 
-footer {
-  text-align: center;
-  background-color: #002244;
-  color: white;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
 .list {
   display: block;
 }
@@ -214,13 +207,6 @@ footer .social-icons img {
 }
 
 /* JOIN PAGE LAYOUT */
-.join-layout {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 2rem;
-  margin-top: 1rem;
-}
-
 .join-form form {
   display: flex;
   flex-direction: column;
@@ -269,12 +255,6 @@ footer .social-icons img {
   margin-top: 0;
 }
 
-.join-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
 .join-form label {
   display: block;
   font-weight: 500;
@@ -297,23 +277,6 @@ footer .social-icons img {
   color: #666;
   margin-top: 0.25rem;
   font-size: 0.85rem;
-}
-
-.cta-btn {
-  display: inline-block;
-  background-color: #e2b18d;
-  color: white;
-  padding: 0.7rem 1rem;
-  border-radius: 4px;
-  font-weight: 600;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-}
-
-.join-benefits h2 {
-  margin-top: 0;
-  color: #002244;
 }
 
 .benefit-card {
