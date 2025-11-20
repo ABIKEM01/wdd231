@@ -212,3 +212,226 @@ footer .social-icons img {
   width: 25px;
   margin: 0 0.5rem;
 }
+
+/* JOIN PAGE LAYOUT */
+.join-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.join-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.join-form input,
+.join-form select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.join-benefits .benefit-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.join-benefits h2 {
+  margin-bottom: 1rem;
+  color: #002244;
+}
+
+/* Two-column layout (left form, right cards) */
+.join-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin: 1rem;
+}
+
+.join-form {
+  background: #fff;
+  padding: 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.join-form h2 {
+  color: #002244;
+  margin-top: 0;
+}
+
+.join-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.join-form label {
+  display: block;
+  font-weight: 500;
+}
+
+.join-form input[type="text"],
+.join-form input[type="email"],
+.join-form input[type="tel"],
+.join-form select,
+.join-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #d0d7df;
+  font-size: 1rem;
+}
+
+.join-form small {
+  display: block;
+  color: #666;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  background-color: #e2b18d;
+  color: white;
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.join-benefits h2 {
+  margin-top: 0;
+  color: #002244;
+}
+
+.benefit-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transform-origin: center;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: cardIn 600ms ease forwards;
+}
+
+.benefit-card:nth-child(1) {
+  animation-delay: 120ms;
+}
+.benefit-card:nth-child(2) {
+  animation-delay: 240ms;
+}
+.benefit-card:nth-child(3) {
+  animation-delay: 360ms;
+}
+.benefit-card:nth-child(4) {
+  animation-delay: 480ms;
+}
+
+@keyframes cardIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.benefit-card h3 {
+  margin: 0 0 0.5rem 0;
+  color: #002244;
+}
+.benefit-card p {
+  margin: 0.25rem 0;
+}
+
+.benefit-card .view-btn {
+  margin-top: 0.5rem;
+  background: none;
+  border: 1px solid #002244;
+  color: #002244;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Modal styles */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 60;
+}
+.modal-backdrop[aria-hidden="false"] {
+  display: flex;
+}
+
+.modal {
+  background: #fff;
+  width: min(680px, 92%);
+  max-width: 720px;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 8px 30px rgba(2, 34, 68, 0.2);
+}
+
+.modal header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal h3 {
+  margin: 0;
+  color: #fff;
+}
+.modal .close-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.modal .modal-body {
+  margin-top: 0.75rem;
+  color: #222;
+  line-height: 1.4;
+}
+
+.thank-section {
+  max-width: 900px;
+  margin: 1.5rem auto;
+  background: #fff;
+  padding: 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+.thank-section h2 {
+  color: #002244;
+  margin-top: 0;
+}
+.summary-list {
+  margin-top: 1rem;
+}
+.summary-list p {
+  margin: 0.45rem 0;
+  font-size: 1rem;
+}
+.back-home {
+  margin-top: 1rem;
+  display: inline-block;
+}

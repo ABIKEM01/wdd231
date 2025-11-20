@@ -3,9 +3,325 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta
+      name="description"
+      content="Nigeria Chamber of Commerce Join Page - Promoting businesses, events, and opportunities."
+    />
+    <meta name="author" content="Abiodun Temitope Babayode" />
+    <title>Join | Nigeria Chamber of Commerce</title>
+
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/large.css" />
+    <script src="scripts/join.js" defer></script>
   </head>
+
   <body>
-    Join
+    <header>
+      <div class="logo">
+        <img src="images/logo.jpeg" alt="Nigeria Chamber of Commerce logo" />
+        <h1>Nigeria Chamber of Commerce</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html" class="active">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+      </nav>
+      <button id="menu-btn">&#9776;</button>
+    </header>
+
+    <main>
+      <div class="join-layout">
+        <section class="join-form" aria-labelledby="join-heading">
+          <h2 id="join-heading">Apply to Join the Chamber</h2>
+
+          <form id="joinForm" method="get" action="thankyou.html" novalidate>
+            <!-- First Name -->
+            <label>
+              First Name
+              <input
+                type="text"
+                name="firstName"
+                title="Applicant first name"
+                autocomplete="given-name"
+                required
+              />
+            </label>
+
+            <!-- Last Name -->
+            <label>
+              Last Name
+              <input
+                type="text"
+                name="lastName"
+                title="Applicant last name"
+                autocomplete="family-name"
+                required
+              />
+            </label>
+
+            <!-- Title / Position with pattern -->
+            <label>
+              Title / Position
+              <input
+                type="text"
+                name="title"
+                title="Your organizational title (letters, spaces, hyphens; min 7 chars)"
+                autocomplete="organization-title"
+                pattern="[A-Za-z\\-\\s]{7,}"
+                required
+                placeholder="e.g. Director of Sales"
+              />
+              <small
+                >Only letters, spaces, hyphens — minimum 7 characters.</small
+              >
+            </label>
+
+            <!-- Email with placeholder -->
+            <label>
+              Email Address
+              <input
+                type="email"
+                name="email"
+                title="Your email address"
+                autocomplete="email"
+                placeholder="example@email.com"
+                required
+              />
+            </label>
+
+            <!-- Mobile phone -->
+            <label>
+              Mobile Phone
+              <input
+                type="tel"
+                name="phone"
+                title="Mobile phone number"
+                autocomplete="tel"
+                pattern="\\+?[0-9\\s\\-()]{7,}"
+                required
+                placeholder="+234 801 234 5678"
+              />
+            </label>
+
+            <!-- Business/Organization name -->
+            <label>
+              Business / Organization
+              <input
+                type="text"
+                name="organization"
+                title="Business or organization name"
+                autocomplete="organization"
+                required
+              />
+            </label>
+
+            <label>
+              Membership Level
+              <select
+                name="membership"
+                title="Choose a membership level"
+                required
+              >
+                <option value="">-- Select membership level --</option>
+                <option value="np">NP Membership (Non-profit — Free)</option>
+                <option value="bronze">Bronze Membership</option>
+                <option value="silver">Silver Membership</option>
+                <option value="gold">Gold Membership</option>
+              </select>
+            </label>
+
+            <label>
+              Organization Description
+              <textarea
+                name="description"
+                title="Describe your business or organization"
+                rows="4"
+                placeholder="Brief description (optional)"
+              ></textarea>
+            </label>
+
+            <!-- Hidden timestamp -->
+            <input type="hidden" name="timestamp" id="timestamp" />
+
+            <!-- Submit -->
+            <input type="submit" value="Submit Application" class="cta-btn" />
+          </form>
+        </section>
+
+        <!-- RIGHT: Benefit cards -->
+        <aside class="join-benefits" aria-labelledby="benefits-heading">
+          <h2 id="benefits-heading">Membership Levels</h2>
+
+          <!-- Bronze -->
+          <article class="benefit-card" id="card-bronze">
+            <h3>Bronze Membership</h3>
+            <p>Basic directory listing, newsletter, event invites.</p>
+            <button class="view-btn" data-modal="modal-bronze">
+              View Benefits
+            </button>
+          </article>
+
+          <!-- Silver -->
+          <article class="benefit-card" id="card-silver">
+            <h3>Silver Membership</h3>
+            <p>All Bronze benefits + social promotion and website feature.</p>
+            <button class="view-btn" data-modal="modal-silver">
+              View Benefits
+            </button>
+          </article>
+
+          <!-- Gold -->
+          <article class="benefit-card" id="card-gold">
+            <h3>Gold Membership</h3>
+            <p>
+              All Silver benefits + priority placement & featured spotlight.
+            </p>
+            <button class="view-btn" data-modal="modal-gold">
+              View Benefits
+            </button>
+          </article>
+
+          <!-- NP -->
+          <article class="benefit-card" id="card-np">
+            <h3>NP Membership (Non-profit)</h3>
+            <p>Directory listing, community resources, no fee.</p>
+            <button class="view-btn" data-modal="modal-np">
+              View Benefits
+            </button>
+          </article>
+        </aside>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-info">
+        <p>Nigeria Chamber of Commerce</p>
+        <p>10 Unity Road, Lagos, Nigeria</p>
+        <p>Email: info@nigeriachamber.org | Phone: (234) 555-2300</p>
+      </div>
+      <p>&copy; <span id="year"></span> Nigeria Chamber of Commerce</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <div
+      class="modal-backdrop"
+      id="modal-bronze"
+      role="dialog"
+      aria-hidden="true"
+      aria-labelledby="modal-bronze-title"
+    >
+      <div class="modal" role="document">
+        <header>
+          <h3 id="modal-bronze-title">Bronze Membership Benefits</h3>
+          <button
+            class="close-btn"
+            data-close="modal-bronze"
+            aria-label="Close"
+          >
+            ✕
+          </button>
+        </header>
+        <div class="modal-body">
+          <p><strong>Included:</strong></p>
+          <ul>
+            <li>Business directory listing</li>
+            <li>Monthly newsletter</li>
+            <li>Invitations to networking events</li>
+          </ul>
+          <p>Cost: Affordable entry-level pricing.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Silver Modal -->
+    <div
+      class="modal-backdrop"
+      id="modal-silver"
+      role="dialog"
+      aria-hidden="true"
+      aria-labelledby="modal-silver-title"
+    >
+      <div class="modal" role="document">
+        <header>
+          <h3 id="modal-silver-title">Silver Membership Benefits</h3>
+          <button
+            class="close-btn"
+            data-close="modal-silver"
+            aria-label="Close"
+          >
+            ✕
+          </button>
+        </header>
+        <div class="modal-body">
+          <p><strong>Included:</strong></p>
+          <ul>
+            <li>All Bronze benefits</li>
+            <li>Social media promotion</li>
+            <li>One website spotlight per year</li>
+          </ul>
+          <p>Cost: Mid-tier pricing for additional reach.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gold Modal -->
+    <div
+      class="modal-backdrop"
+      id="modal-gold"
+      role="dialog"
+      aria-hidden="true"
+      aria-labelledby="modal-gold-title"
+    >
+      <div class="modal" role="document">
+        <header>
+          <h3 id="modal-gold-title">Gold Membership Benefits</h3>
+          <button class="close-btn" data-close="modal-gold" aria-label="Close">
+            ✕
+          </button>
+        </header>
+        <div class="modal-body">
+          <p><strong>Included:</strong></p>
+          <ul>
+            <li>All Silver benefits</li>
+            <li>Priority event placement</li>
+            <li>Featured spotlight listing on homepage</li>
+            <li>Discounts on sponsored events</li>
+          </ul>
+          <p>Cost: Premium package for highest visibility.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- NP Modal -->
+    <div
+      class="modal-backdrop"
+      id="modal-np"
+      role="dialog"
+      aria-hidden="true"
+      aria-labelledby="modal-np-title"
+    >
+      <div class="modal" role="document">
+        <header>
+          <h3 id="modal-np-title">Non-Profit Membership Benefits</h3>
+          <button class="close-btn" data-close="modal-np" aria-label="Close">
+            ✕
+          </button>
+        </header>
+        <div class="modal-body">
+          <p><strong>Included:</strong></p>
+          <ul>
+            <li>Directory listing</li>
+            <li>Access to community resource sessions</li>
+            <li>No membership fee</li>
+          </ul>
+          <p>
+            This membership supports community and charitable organizations.
+          </p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

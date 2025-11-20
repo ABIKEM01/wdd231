@@ -32,4 +32,14 @@
   .spotlights #spotlight-container {
     grid-template-columns: 1fr;
   }
+  .join-layout {
+    display: block;
+  }
+  .join-layout {
+    display: block;
+  }
+  .join-layout .join-form,
+  .join-layout .join-benefits {
+    margin: 1rem;
+  }
 }

@@ -1,6 +1,17 @@
 const navbutton = document.querySelector("#ham-btn");
 const navlinks = document.querySelector("#nav-bar");
 
+const openButton = document.querySelector("#openButton");
+const dialogBox = document.querySelector("#dialogBox");
+const closeButton = document.querySelector("#closeButton");
+
+openButton.addEventListener("click", () => {
+  dialogBox.showModal();
+});
+closeButton.addEventListener("click", () => {
+  dialogBox.close();
+});
+
 navbutton.addEventListener("click", () => {
   navbutton.classList.toggle("show");
   navlinks.classList.toggle("show");
@@ -64,6 +75,9 @@ function displayCourses(courseList) {
     div.textContent = `${course.code} - ${course.name}`;
     container.appendChild(div);
     total += course.credits;
+    div.addEventListener("click", () => {
+      displayCourseDetails(course);
+    });
   });
 
   totalCredits.textContent = `Total credits for these courses: ${total}`;
@@ -85,3 +99,21 @@ document
 
 // default display
 displayCourses(courses);
+
+function displayCourseDetails(course) {
+  courseDetails.innerHTML = "";
+  courseDetails.innerHTML = `
+    <button id="closeModal">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(", ")}</p>
+  `;
+  courseDetails.showModal();
+
+  closeModal.addEventListener("click", () => {
+    courseDetails.close();
+  });
+}
