@@ -1,4 +1,4 @@
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   nav ul {
     display: none;
   }
@@ -41,5 +41,23 @@
   .join-layout .join-form,
   .join-layout .join-benefits {
     margin: 1rem;
+  }
+} */
+
+/* LARGE (1025px+) */
+@media (min-width: 1025px) {
+  .discover-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "item1 item2 item3 item4"
+      "item5 item6 item7 item8";
+  }
+
+  .discover-card img:hover {
+    transform: scale(1.05);
+    filter: brightness(90%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
 }

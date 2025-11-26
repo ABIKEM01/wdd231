@@ -1,0 +1,17 @@
+/* MEDIUM (601px – 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .discover-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "item1 item2"
+      "item3 item4"
+      "item5 item6"
+      "item7 item8";
+  }
+
+  .discover-card img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+}

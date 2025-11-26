@@ -3,9 +3,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta
+      name="description"
+      content="Nigeria Chamber of Commerce Discovery Page - Supporting local businesses and economic growth."
+    />
+    <meta name="author" content="Abiodun Temitope Babayode" />
+
+    <!-- Facebook Open Graph Meta -->
+    <meta property="og:title" content="Nigeria Chamber of Commerce" />
+    <meta
+      property="og:description"
+      content="Explore local Nigerian businesses in our Chamber of Commerce Directory."
+    />
+    <meta
+      property="og:image"
+      content="https://abikem01.github.io/wdd231/chamber/images/social-preview.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://abikem01.github.io/wdd231/chamber/discover.html"
+    />
+    <meta property="og:type" content="website" />
+    <title>Discover | Nigeria Chamber of Commerce</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/medium.css" />
+    <link rel="stylesheet" href="styles/large.css" />
+
+    <script src="scripts/discover.js" type="module" defer></script>
   </head>
+
   <body>
-    Discover
+    <header>
+      <div class="logo">
+        <img src="images/logo.jpeg" alt="Nigeria Chamber Logo" />
+        <h1>Nigeria Chamber of Commerce</h1>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html" class="active">Discover</a></li>
+        </ul>
+      </nav>
+
+      <button id="menu-btn">&#9776;</button>
+    </header>
+
+    <!-- LAST VISIT MESSAGE -->
+    <section id="visit-message" class="visit-msg"></section>
+
+    <main class="discover-grid">
+      <!-- JS inserts the 8 cards here -->
+    </main>
+
+    <footer>
+      <div class="footer-info">
+        <p>Nigeria Chamber of Commerce</p>
+        <p>10 Unity Road, Lagos, Nigeria</p>
+        <p>Email: info@nigeriachamber.org | Phone: (234) 555-2300</p>
+      </div>
+      <p>
+        &copy; <span id="year"></span> Nigeria Chamber of Commerce | WDD231 |
+        Abiodun Temitope Babayode
+      </p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
   </body>
 </html>
