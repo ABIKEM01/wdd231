@@ -1,0 +1,70 @@
+<!-- form-action.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Servver — contact form results" />
+    <meta name="author" content="Abiodun Temitope Babayode" />
+    <title>Form Submission — Servver</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <div class="brand">
+          <img src="images/servver-logo.webp" alt="Servver logo" />
+          <h1>Servver</h1>
+        </div>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button
+          class="nav-toggle"
+          aria-controls="main-navigation"
+          aria-expanded="false"
+        >
+          ☰ Menu
+        </button>
+      </div>
+    </header>
+
+    <main class="container">
+      <h2>Form Submission Received</h2>
+      <div id="result"></div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Servver</p>
+      </div>
+    </footer>
+
+    <script>
+      // Read URLSearchParams and show values with validation checks
+      const params = new URLSearchParams(location.search);
+      const requiredFields = ["fullname", "email", "service"];
+      const result = document.getElementById("result");
+      const missing = requiredFields.filter((f) => !params.get(f));
+
+      if (missing.length) {
+        result.innerHTML =
+          '<p class="error">Required fields missing: ' +
+          missing.join(", ") +
+          "</p>";
+      } else {
+        result.innerHTML = `
+        <p><strong>Full name:</strong> ${params.get("fullname")}</p>
+        <p><strong>Email:</strong> ${params.get("email")}</p>
+        <p><strong>Service:</strong> ${params.get("service")}</p>
+        <p><strong>Message:</strong> ${
+          params.get("message") || "(no message provided)"
+        }</p>
+        <p>Thank you! We will contact you soon about your request.</p>
+      `;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Servver — contact and inquiries" />
+    <meta name="author" content="Abiodun Temitope Babayode" />
+    <title>Servver — Contact</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script type="module" src="scripts/main.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <div class="brand">
+          <img src="images/servver-logo.webp" alt="Servver logo" />
+          <h1>Servver</h1>
+        </div>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button
+          class="nav-toggle"
+          aria-controls="main-navigation"
+          aria-expanded="false"
+        >
+          ☰ Menu
+        </button>
+      </div>
+    </header>
+
+    <main class="container" id="main">
+      <h2>Contact Us</h2>
+      <form action="form-action.html" method="get" id="contactForm" novalidate>
+        <div>
+          <label for="fullname">Full name</label>
+          <input id="fullname" name="fullname" required minlength="2" />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+        <div>
+          <label for="service">Service interested in</label>
+          <select id="service" name="service" required>
+            <option value="">Choose one</option>
+            <option>Home Cleaning</option>
+            <option>Electrician - Fixes</option>
+            <option>Car Repair - Basic</option>
+          </select>
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+        <div>
+          <button type="submit" class="btn">Send</button>
+        </div>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; 2025 Servver —
+          <a
+            href="https://youtu.be/yourvideo"
+            style="color: inherit; text-decoration: underline"
+            >Demo Video</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
