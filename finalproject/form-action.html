@@ -4,10 +4,46 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="description" content="Servver — contact form results" />
+    <meta
+      name="description"
+      content="Browse trusted Nigerian service providers, compare prices, and book professionals for home repairs, cleaning, automotive needs, and more on Servver."
+    />
     <meta name="author" content="Abiodun Temitope Babayode" />
+    <!-- Facebook Open Graph Meta -->
+    <meta
+      property="og:title"
+      content="Servver — Book Trusted Service Providers in Nigeria"
+    />
+
+    <meta
+      property="og:description"
+      content="Discover and book verified Nigerian service professionals for home repairs, cleaning, automotive services, and more — fast, reliable, and affordable."
+    />
+
+    <meta
+      property="og:image"
+      content="https://abikem01.github.io/wdd231/finalproject/images/servver-hero.jpeg"
+    />
+
+    <meta
+      property="og:url"
+      content="https://abikem01.github.io/wdd231/finalproject/services.html"
+    />
+
+    <meta property="og:type" content="website" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Form Submission — Servver</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/large.css" />
+    <script src="scripts/form.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -16,7 +52,7 @@
           <img src="images/servver-logo.webp" alt="Servver logo" />
           <h1>Servver</h1>
         </div>
-        <nav class="main-nav" aria-label="Main navigation">
+        <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
           <a href="index.html">Home</a>
           <a href="services.html">Services</a>
           <a href="contact.html">Contact</a>
@@ -41,30 +77,5 @@
         <p>&copy; 2025 Servver</p>
       </div>
     </footer>
-
-    <script>
-      // Read URLSearchParams and show values with validation checks
-      const params = new URLSearchParams(location.search);
-      const requiredFields = ["fullname", "email", "service"];
-      const result = document.getElementById("result");
-      const missing = requiredFields.filter((f) => !params.get(f));
-
-      if (missing.length) {
-        result.innerHTML =
-          '<p class="error">Required fields missing: ' +
-          missing.join(", ") +
-          "</p>";
-      } else {
-        result.innerHTML = `
-        <p><strong>Full name:</strong> ${params.get("fullname")}</p>
-        <p><strong>Email:</strong> ${params.get("email")}</p>
-        <p><strong>Service:</strong> ${params.get("service")}</p>
-        <p><strong>Message:</strong> ${
-          params.get("message") || "(no message provided)"
-        }</p>
-        <p>Thank you! We will contact you soon about your request.</p>
-      `;
-      }
-    </script>
   </body>
 </html>

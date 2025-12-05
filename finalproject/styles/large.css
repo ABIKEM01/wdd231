@@ -1,0 +1,23 @@
+/*large.css */
+@media (max-width: 700px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    background: var(--primary);
+    position: absolute;
+    top: 64px;
+    right: 0;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  .main-nav.open {
+    display: flex;
+  }
+  .nav-toggle {
+    display: inline-block;
+  }
+}

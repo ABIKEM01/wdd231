@@ -4,12 +4,46 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="description" content="Servver — browse available services" />
+    <meta
+      name="description"
+      content="Browse trusted Nigerian service providers, compare prices, and book professionals for home repairs, cleaning, automotive needs, and more on Servver."
+    />
     <meta name="author" content="Abiodun Temitope Babayode" />
+    <!-- Facebook Open Graph Meta -->
+    <meta
+      property="og:title"
+      content="Servver — Book Trusted Service Providers in Nigeria"
+    />
+
+    <meta
+      property="og:description"
+      content="Discover and book verified Nigerian service professionals for home repairs, cleaning, automotive services, and more — fast, reliable, and affordable."
+    />
+
+    <meta
+      property="og:image"
+      content="https://abikem01.github.io/wdd231/finalproject/images/servver-hero.jpeg"
+    />
+
+    <meta
+      property="og:url"
+      content="https://abikem01.github.io/wdd231/finalproject/services.html"
+    />
+
+    <meta property="og:type" content="website" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Servver — Services</title>
-    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="styles/styles.css" />
-    <script type="module" src="scripts/main.js" defer></script>
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/service.js"></script>
   </head>
   <body>
     <header class="header">
@@ -18,8 +52,7 @@
           <img src="images/servver-logo.webp" alt="Servver logo" />
           <h1>Servver</h1>
         </div>
-
-        <nav class="main-nav" aria-label="Main navigation">
+        <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
           <a href="index.html">Home</a>
           <a href="services.html">Services</a>
           <a href="contact.html">Contact</a>
@@ -75,73 +108,9 @@
       <div class="container">
         <p>
           &copy; 2025 Servver —
-          <a
-            href="https://youtu.be/yourvideo"
-            style="color: inherit; text-decoration: underline"
-            >Demo Video</a
-          >
+          <a class="link-plain" href="https://youtu.be/yourvideo">Demo Video</a>
         </p>
       </div>
     </footer>
-
-    <script type="module">
-      // Extra small script for filtering (demonstrates DOM manipulation & array methods)
-      import { fetchServices } from "./scripts/data.js";
-      const select = document.getElementById("filter");
-      const container = document.getElementById("services-list");
-
-      async function loadAndRender(filter = "all") {
-        try {
-          const data = await fetchServices();
-          let list = data;
-          if (filter !== "all") {
-            list = data.filter(
-              (s) => s.category.toLowerCase() === filter.toLowerCase()
-            );
-          }
-          // store for fast access in main.js too
-          localStorage.setItem("servver_services", JSON.stringify(data));
-          container.innerHTML = list
-            .map((s) => {
-              return `
-            <article class="card" data-id="${
-              s.id
-            }" tabindex="0" aria-labelledby="svc-${s.id}-title">
-              <img src="images/${
-                s.image ? s.image.split("/").pop() : "placeholder.jpg"
-              }" alt="${s.name} image" loading="lazy" />
-              <h3 id="svc-${s.id}-title">${s.name}</h3>
-              <p class="meta">${s.category} • ₦${s.price.toLocaleString()} • ${
-                s.duration
-              }</p>
-              <p class="desc">${s.description}</p>
-              <div class="card-actions">
-                <button class="btn details" data-id="${s.id}">Details</button>
-                <button class="btn ghost fav" data-id="${
-                  s.id
-                }" aria-pressed="false">♡ Save</button>
-              </div>
-            </article>`;
-            })
-            .join("");
-          // attach events after rendering (reuse handlers from main.js)
-          document.querySelectorAll(".card .details").forEach((btn) => {
-            btn.addEventListener("click", (e) => {
-              const id = Number(e.currentTarget.dataset.id);
-              // trigger main.js modal open using global function (populated in main.js)
-              window.dispatchEvent(
-                new CustomEvent("open-service-modal", { detail: { id } })
-              );
-            });
-          });
-        } catch (err) {
-          container.innerHTML = '<p class="error">Failed to load services.</p>';
-        }
-      }
-
-      select.addEventListener("change", (e) => loadAndRender(e.target.value));
-      // initial load
-      loadAndRender();
-    </script>
   </body>
 </html>
